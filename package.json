@@ -1,0 +1,19 @@
+{
+  "name": "safe-tx-checker",
+  "version": "0.0.1",
+  "description": "A simple package to verify the transactions signe via Safe and software/hardware wallets",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xyzconsult/safe-tx-checker.git"
+  },
+  "author": "Anton Astafiev (XYZ Consult)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xyzconsult/safe-tx-checker/issues"
+  },
+  "homepage": "https://github.com/xyzconsult/safe-tx-checker#readme"
+}
