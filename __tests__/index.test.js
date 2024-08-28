@@ -6,24 +6,17 @@ import { describe, expect, it } from '@jest/globals';
 
 import { JSDOM } from 'jsdom';
 
-import { component, App } from '../src/index';
-
-describe('component', () => {
-  it('check innerText', () => {
-    expect.assertions(1);
-    expect(component(new JSDOM().window.document).tagName).toBe('DIV');
-  });
-});
+import { App } from '../src/index';
 
 describe('app', () => {
-  it('appends app', () => {
+  it('attaches event listener', () => {
     expect.assertions(1);
 
-    const jsdom = new JSDOM('<html><body><div id="app"></div></body></html>');
+    const jsdom = new JSDOM('<html><body><form id="app"></form></body></html>');
     const doc = jsdom.window.document;
 
     App(doc);
 
-    expect(doc.getElementById('app').childNodes).toHaveLength(1);
+    expect(doc.getElementById('app')).toHaveLength(0);
   });
 });

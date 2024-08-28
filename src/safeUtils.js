@@ -4,7 +4,6 @@ import { encodeParameters } from 'web3-eth-abi';
 const SAFE_TX_TYPEHASH = '0xbb8310d486368db6bd6f849402fdd73ad53d316b5a4b2644ad6efe0f941286d8';
 const DOMAIN_SEPARATOR_TYPEHASH = '0x47e79534a245952e8b16893a336b85a3d9ea9fa8c573f3d803afb92a79469218';
 
-
 export function getTxHash(safeAddress, chainId, nonce, to, value = '0', calldata = '0x', operation = '0', safeTxGas = '0', baseGas = '0', gasPrice = '0', gasToken = '0x0000000000000000000000000000000000000000', refundReceiver = '0x0000000000000000000000000000000000000000') {
   const safeTxHash  = keccak256(encodeParameters(
     [
