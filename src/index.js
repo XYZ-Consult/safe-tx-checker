@@ -1,8 +1,5 @@
-import { getTxHash } from './safeUtils';
-
 export function component(dom) {
   const element = dom.createElement('div');
-  element.innerText = getTxHash();
   return element;
 }       
 
