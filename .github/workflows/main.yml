@@ -1,0 +1,13 @@
+name: Lint and test
+
+on:
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  lint-n-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check docker
+        run: docker ps -a
