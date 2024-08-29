@@ -4,6 +4,8 @@ on:
   pull_request:
     types:
       - opened
+      - reopened
+      - synchronized
 
 jobs:
   lint-n-test:
