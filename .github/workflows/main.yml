@@ -12,4 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Lint and test
-        run: docker run --entrypoint '/bin/bash' -v `pwd`:/code/ node:latest -c 'cd /code && yarn install && yarn run lint && yarn test'
+        run: ls -la && docker run --entrypoint '/bin/bash' -v `pwd`:/code/ node:latest -c 'cd /code && yarn install && yarn run lint && yarn test'
