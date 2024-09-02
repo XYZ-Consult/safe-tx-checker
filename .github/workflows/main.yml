@@ -14,4 +14,7 @@ jobs:
       - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29  # v4
 
       - name: Lint and test
-        run: ls -la && docker run --entrypoint '/bin/bash' -v `pwd`:/code/ node:latest -c 'cd /code && yarn install && yarn run lint && yarn test'
+        run: docker run --entrypoint '/bin/bash' -v `pwd`:/code/ node:latest -c 'cd /code && yarn install && yarn run lint && yarn test'
+
+      - name: codecov
+        run: npx codecov

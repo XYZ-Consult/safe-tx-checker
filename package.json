@@ -21,6 +21,7 @@
   "devDependencies": {
     "@babel/core": "^7.0.0-0",
     "@babel/preset-env": "^7.25.3",
+    "codecov": "^3.8.3",
     "eslint": "^9.9.0",
     "eslint-plugin-jest": "^28.8.0",
     "globals": "^15.9.0",
