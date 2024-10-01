@@ -9,12 +9,14 @@ export function App(dom) {
       {id: 'chainId', title: 'Chain ID'},
       {id: 'to', title: 'To address'},
       {id: 'nonce', title: 'Nonce'},
+      {id: 'value', title: 'Value'},
+      {id: 'calldata', title: 'Calldata'},
     ],
     oninput: () => {
       const data = parseForm(app);
       var hash;
       try {
-        hash = getTxHash(data.safe, data.chainId, data.nonce, data.to);
+        hash = getTxHash(data.safe, data.chainId, data.nonce, data.to, data.value, data.calldata);
       } catch (e) {
         console.log(e);
       }
